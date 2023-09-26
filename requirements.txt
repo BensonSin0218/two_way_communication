@@ -1,0 +1,4 @@
+asyncio==3.4.3
+nest-asyncio==1.6.0
+python-socketio==5.11.3
+uvicorn==0.30.1

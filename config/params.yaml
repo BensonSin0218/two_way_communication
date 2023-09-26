@@ -1,0 +1,23 @@
+/**:
+  two_way_communication_socket_node:
+    ros__parameters:
+      topics: [talker, listener, movement]
+      topics_setting:
+        talker:
+          direction: ros_to_network
+          topic_name: talker
+          message_type: std_msgs/msg/String
+
+        listener:
+          direction: network_to_ros
+          topic_name: listener
+          message_type: std_msgs/msg/String
+
+        movement:
+          direction: network_to_ros
+          topic_name: movement
+          message_type: geometry_msgs/msg/Twist
+
+      network:
+        host: "0.0.0.0"
+        port: 1234
