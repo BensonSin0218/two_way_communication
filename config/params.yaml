@@ -1,0 +1,22 @@
+two_way_communication_node:
+  ros__parameters:
+    topics_list: [talker, listener]
+    topics:
+      talker:
+        type: ros_to_network
+        topic_name: /talker
+        message_type: std_msgs/msg/String
+        qos: 1
+      listener:
+        type: network_to_ros
+        topic_name: /listener
+        message_type: std_msgs/msg/String
+        qos: 1
+    services_list: [testing_service]
+    services:
+      testing_service:
+        service_name: /testing_service
+        srv: example_interfaces/srv/AddTwoInts
+    network:
+      address: "0.0.0.0"
+      port: 1234
