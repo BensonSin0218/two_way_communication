@@ -1,8 +1,6 @@
 import rclpy
 from .two_way_communication_node import TwoWayCommunicationNode
 
-from threading import Thread
-
 def main(args=None) -> None:
     rclpy.init(args=args)
 
