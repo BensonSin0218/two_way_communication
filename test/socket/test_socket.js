@@ -18,7 +18,7 @@ socket.on("connect", () => {
 
     setInterval(() => socket.emit("service", {
         service: "testing_service",
-        request: { a: 1, b: 2}
+        request: { a: 1, b: 2 }
     },
     (res) => console.log("Service1:", res)), 5000)
 
